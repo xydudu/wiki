@@ -1,0 +1,13 @@
+= HTML5 =
+
+== video ==
+HTML5定义了一个使用<video>元素来嵌入视频到网页的标准。[http://dev.w3.org/html5/spec/Overview.html#video 查看w3c上的说明]
+
+* 现在主流的格式
+* 现在主流的解码器
+
+== 参考资料 ==
+* [http://html5test.com/ 测试浏览器对HTML5支持程度]
+* http://dev.w3.org/html5/spec/Overview.html
+* http://diveintohtml5.org
+* http://www.html5video.org/

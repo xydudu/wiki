@@ -2,3 +2,16 @@
 有几点要注意：
 * 要注意HTML是否正确，标签是否闭合，不要相信设计们。
 * 规划的要求永远很变态
+
+== 配置vimwiki  ==
+.vimrc 文件：
+{{{class="brush: c"
+    
+    let g:vimwiki_list = [{'path': '~/my_site/', 'path_html': '~/public_html/'}]
+
+}}}
+    path -- 存放wiki文件路径 path_html -- 存放生成的HTML路径
+
+代码高亮
+# 配置: nested_syntaxes 
+# [http://code.google.com/p/vimwiki/wiki/HighlightProgrammingCode taxhighlighter]

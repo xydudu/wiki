@@ -1,0 +1,8 @@
+= xydudu WIKI  =
+== javascript  ==
+== vim  ==
+== ubuntu  ==
+== python  ==
+== other ==
+* [[html5][html5]]
+
