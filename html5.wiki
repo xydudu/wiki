@@ -3,11 +3,83 @@
 == video ==
 HTML5定义了一个使用<video>元素来嵌入视频到网页的标准。[http://dev.w3.org/html5/spec/Overview.html#video 查看w3c上的说明]
 
-* 现在主流的格式
-* 现在主流的解码器
+* 现在主流的编码格式，h264, theora, webM。
+
+=== 优势及前景 ===
+* 页面嵌入视频不再需要第三方插件
+* 调用方便
+* 移动平台支持
+* 几大主流浏览器的支持
+
+=== 浏览器对 video 标签支持情况 ===
+
+| IE9 | IE8 | IE7 | FX3.5 | FX3.0 | SAF4 | SAF3 | CHROME | OPERA |
+|-----+-----+-----+-------+-------+------+------+--------+-------|
+| Y   | N   | N   | Y     | N     | Y    | Y    | Y      | Y     |
+
+=== 现在常用浏览器对各解码格式的支持 ===
+
+| codecs            | IE8 | FX3.5 | OP10.5 | CHROME5 | SAFARI | IPHONE | ANDROID |
+|-------------------+-----+-------+--------+---------+--------+--------+---------|
+| Theora+Vorbis+Ogg | N   | Y     | Y      | Y       | N      | N      | N       |
+| H.264+ACC+MP4     | N   | N     | N      | Y       | Y      | Y      | Y       |
+| WebM              | N   | N     | N      | N       | N      | N      | N       |
+
+=== 未来几种浏览器对各解码格式的支持 ===
+
+| codecs            | IE9 | FX4 | OP11 | CHROME6 | SAFARI | IPHONE | ANDROID |
+|-------------------+-----+-----+------+---------+--------+--------+---------|
+| Theora+Vorbis+Ogg | N   | Y   | Y    | Y       | N      | N      | N       |
+| H.264+ACC+MP4     | Y   | N   | N    | Y       | Y      | Y      | Y       |
+| WebM              | N   | Y   | Y    | Y       | N      | N      | N       |
+
+    从上面表格可以看出，没有一种视频解码格式可以通吃支持HTML5的所有浏览器，而且这种状况并不会在近期内能解决。
+    为了让我们的视频可以被各浏览器支持，我们需要多种编码格式的影片。
+
+=== 调用方法 ===
+==== 基本====
+{{{name="code" class="html"
+
+    <video 
+        
+        poster="img/oceans-clip.png" 
+        src="http://video-js.s3.amazonaws.com/oceans-clip.ogg"
+        controls 
+        autoplay 
+        loop
+
+    ></video>
+
+}}}
+
+    * 说明：
+        # poster: 封面，在视频未播放之前显示的画面。
+        # src: 视频源地址。
+
+    * 支持内建指令：
+        # controls 是否可控制
+        # autoplay 是否自动播放
+        # loop 是否重复
+        # preload 是否提前加载
+
+    * 支持script外部控制：
+        # play() 播放
+        # pause() 停止
+        # playbackRate() 控制播放速度
+
+==== demos ====
 
 == 参考资料 ==
+* [http://firefogg.org/ 一个转视频格式到ogg的firefox扩展]
 * [http://html5test.com/ 测试浏览器对HTML5支持程度]
+* [http://www.ruanyifeng.com/blog/2010/05/html5_codec_fight.html HTML5的视频格式之争]
+* [http://www.tgideas.com/?p=1033 HTML 5 Video概述]
+* [http://www.w3.org/2010/05/video/mediaevents.html w3c的video测试页]
+* [http://henriksjokvist.net/archive/2009/2/using-the-html5-video-tag-with-a-flash-fallback Using the HTML5 <video> tag with a Flash fallback]
 * http://dev.w3.org/html5/spec/Overview.html
 * http://diveintohtml5.org
 * http://www.html5video.org/
+* http://html5readiness.com/
+* [http://www.happyworm.com/jquery/jplayer/latest/demos.htm jplayer(一个jqeury扩展)]
+* [http://www.techbang.com.tw/posts/2025-o-column-bets-html5-video-tag 備受矚目的 HTML5 Video標籤]
+
